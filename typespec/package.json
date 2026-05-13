@@ -8,10 +8,14 @@
     "compile": "npm run _tsp -- compile .",
     "watch": "npm run _tsp -- compile . --watch"
   },
+  "engines": {
+    "node": ">=24"
+  },
   "dependencies": {
     "@redocly/cli": "^2.30.5",
     "@typespec/compiler": "^1.12.0",
     "@typespec/http": "^1.12.0",
+    "@typespec/openapi": "^1.12.0",
     "@typespec/openapi3": "^1.12.0",
     "@typespec/rest": "^0.82.0",
     "@typespec/versioning": "^0.82.0"
