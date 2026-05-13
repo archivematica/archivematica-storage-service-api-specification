@@ -7,6 +7,7 @@ import "@typespec/versioning";
 import "./common.tsp";
 
 using TypeSpec.Http;
+using TypeSpec.OpenAPI;
 using TypeSpec.Rest;
 using TypeSpec.Versioning;
 
@@ -22,6 +23,7 @@ namespace Service {
     v1,
   }
 
+  @tag("Pipelines")
   @route("/pipeline/")
   namespace Pipelines {
     @get
@@ -49,6 +51,7 @@ namespace Service {
     };
   }
 
+  @tag("Locations")
   @route("/location/")
   namespace Locations {
     @get
@@ -133,6 +136,7 @@ namespace Service {
     };
   }
 
+  @tag("Async")
   @route("/async/")
   namespace Async {
     @route("{id}/")
@@ -145,6 +149,7 @@ namespace Service {
     };
   }
 
+  @tag("Packages")
   @route("/file/")
   namespace Packages {
     @route("{uuid}/")
